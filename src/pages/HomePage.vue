@@ -7,7 +7,7 @@ const counterStore = useCounterStore()
   <main
     class="min-h-screen flex flex-col justify-center items-center bg-gradient-to-br from-gray-50 to-gray-200 text-gray-800 font-sans animate-fade-in">
     <h1 class="text-5xl font-extrabold text-gray-800 mb-8 tracking-tight animate-fade-in">
-      Olá stefany, agora você vai começar a codar, boa sorte, precisar não me ligue e me chame estou atras de você!
+      Olá stefany
     </h1>
 
     <p class="text-xl text-gray-600 mb-6 animate-fade-in delay-200">Hello World</p>
