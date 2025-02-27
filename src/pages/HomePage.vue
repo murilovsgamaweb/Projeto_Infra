@@ -1,5 +1,5 @@
 <script>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 
 export default {
@@ -9,50 +9,78 @@ export default {
       alert(`Código enviado: ${code.value}`);
     };
 
+    onMounted(() => {
+      const link = document.createElement('link');
+      link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
+      link.rel = 'stylesheet';
+      document.head.appendChild(link);
+    });
+
     return { code, submitCode, LogoRemaza };
   },
 };
 </script>
 
 <template>
-  <div class="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+  <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
+    
+    <img :src="LogoRemaza" alt="Remaza" class="w-[150px] md:w-[200px] lg:w-[250px] mx-auto mb-4" />
 
-    <img :src="LogoRemaza" alt="Remaza" class="w-32 mx-auto mb-4" />
 
-
-
-    <div class="bg-white p-8 rounded-lg shadow-md w-full max-w-md">
+    <div class="p-6 md:p-8 w-full max-w-md border border-[#A6A6A6] bg-[#F0F4F8] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[20px]">
       <div class="mb-6 relative">
-        <h1 class="text-2xl font-bold text-gray-800 mb-4">Bem vindo!</h1>
-        <label for="qrCode" class="block text-sm font-medium text-gray-700">Digite o código ou escaneie o QR Code</label>
+
+        <h1 class="text-xl md:text-2xl font-bold mb-4 text-center" style="color: #102155;">Bem vindo!</h1>
+
+        <label for="qrCode" class="block text-sm md:text-base font-medium pl-2" style="color: #102155;">Digite o código ou escaneie o QR Code</label>
         <div class="relative">
+
           <input
             v-model="code"
             type="text"
             id="qrCode"
-            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm pr-12"
+            class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-[15px] shadow-sm focus:outline-none focus:ring-gray-500 focus:border-gray-400 text-sm md:text-base pr-12"
             placeholder="Digite o código ou QR CODE"
+            maxlength="8"
+            required
           />
 
           <button
-            class="absolute inset-y-0 right-0 px-4 flex items-center bg-orange-500 text-white rounded-r-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
+            class="absolute inset-y-0 right-0 px-3 flex items-center text-white rounded-[15px] focus:outline-none focus:ring-2 focus:ring-opacity-50 transition duration-200 hover:bg-[#ff9e4f]"
+            style="background-color: #FF9900;"
           >
             <i class="material-icons">camera_alt</i>
           </button>
         </div>
       </div>
 
-
-      <button
-        @click="submitCode"
-        class="w-full px-4 py-2 bg-orange-500 text-white rounded-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-opacity-50"
-      >
-        Buscar
-      </button>
+      <div class="flex justify-center">
+        <button
+          @click="submitCode"
+          class="w-full md:w-1/2 px-3 py-2 md:py-1.5 text-white rounded-[15px] border border-[#FF9E01] bg-[#FF8C00] shadow-[inset_0px_4px_4px_0px_#FFF4E1] hover:bg-[#FF7F00] focus:outline-none focus:ring-2 focus:ring-[#FF9E01] focus:ring-opacity-50 transition duration-200"
+        >
+          Buscar
+        </button>
+      </div>
     </div>
   </div>
 </template>
 
 <style scoped>
+.gradient-bg {
+  background: linear-gradient(224deg, rgba(255, 255, 255, 0.60) -8.95%, rgba(240, 244, 248, 0.60) 22.3%, rgba(74, 144, 226, 0.60) 132.39%);
+  width: 100%;
+  height: 100vh;
+}
 
+body {
+  font-family: 'Roboto', sans-serif;
+}
+</style>
+
+<style>
+body {
+  font-family: 'Roboto', sans-serif;
+  background: linear-gradient(224deg, rgba(255, 255, 255, 0.60) -8.95%, rgba(240, 244, 248, 0.60) 22.3%, rgba(74, 144, 226, 0.60) 132.39%);
+}
 </style>
