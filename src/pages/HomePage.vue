@@ -1,6 +1,10 @@
-<script>
+<script lang="ts">
+
 import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
+import footer from '@/shared/components/footer.vue';
+
 
 export default {
   setup() {
@@ -23,7 +27,7 @@ export default {
 
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
-    
+
     <img :src="LogoRemaza" alt="Remaza" class="w-[150px] md:w-[200px] lg:w-[250px] mx-auto mb-4" />
 
 
@@ -55,15 +59,22 @@ export default {
       </div>
 
       <div class="flex justify-center">
+
+
+        <router-link to="/initialform">
         <button
-          @click="submitCode"
-          class="w-full md:w-1/2 px-3 py-2 md:py-1.5 text-white rounded-[15px] border border-[#FF9E01] bg-[#FF8C00] shadow-[inset_0px_4px_4px_0px_#FFF4E1] hover:bg-[#FF7F00] focus:outline-none focus:ring-2 focus:ring-[#FF9E01] focus:ring-opacity-50 transition duration-200"
+          class="w-full px-20 py-2 md:py-1.5 text-white rounded-[15px] border border-[#FF9E01] bg-[#FF8C00] shadow-[inset_0px_4px_4px_0px_#FFF4E1] hover:bg-[#FF7F00] focus:outline-none focus:ring-2 focus:ring-[#FF9E01] focus:ring-opacity-50 transition duration-200"
         >
           Buscar
         </button>
+      </router-link>
+
+
       </div>
     </div>
   </div>
+  <footer />
+
 </template>
 
 <style scoped>
