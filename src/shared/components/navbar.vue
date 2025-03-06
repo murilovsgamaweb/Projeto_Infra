@@ -1,8 +1,9 @@
-<script lang = 'ts'>
-import iconSair from '../../assets/images/iconSair.png';
+<script lang="ts">
+import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+import iconSair from '@/assets/images/mdi_arrow-left-bold.svg';
 
-export default {
+export default defineComponent({
   setup() {
     const router = useRouter();
 
@@ -10,9 +11,11 @@ export default {
       router.back();
     };
 
+    console.log("Caminho do ícone:", iconSair);
+
     return { goBack, iconSair };
   }
-};
+});
 </script>
 
 <template>
@@ -22,6 +25,3 @@ export default {
     </button>
   </nav>
 </template>
-
-
-

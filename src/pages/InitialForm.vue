@@ -3,9 +3,9 @@ import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 import iconSuporte from '@/assets/images/iconSuporte.png';
 import navbar from '@/shared/components/navbar.vue';
-import Footer from '@/shared/components/footer.vue';
+import footer from '@/shared/components/footer.vue';
 export default {
-  components: { navbar, Footer },
+  components: { navbar, footer },
   setup() {
     const empresa = ref('Websupply');
     const departamento = ref('TI');
@@ -75,12 +75,11 @@ export default {
         </button>
       </router-link>
 
-      <button class="w-full py-2 rounded-lg border border-green-500 text-green-600 font-semibold flex items-center justify-center gap-2 hover:bg-green- transition">
+      <button class="w-full py-2 rounded-lg border border-green-500 text-green-600 font-semibold flex items-center justify-center gap-2 hover:bg-100green- transition">
         <i class="material-icons">chat</i> Falar no Whatsapp
       </button>
     </div>
   </div>
-  <Footer />
 </template>
 
 <style scoped>

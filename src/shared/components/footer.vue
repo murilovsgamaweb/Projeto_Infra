@@ -1,8 +1,9 @@
 <script lang="ts">
-import logoWS from '../../assets/images/logoWS.png';
+import { defineComponent } from 'vue';
 import { useRouter } from 'vue-router';
+import logoWSq from '@/assets/images/202001-websupply-shield-02-02 (1).svg?url';
 
-export default {
+export default defineComponent({
   setup() {
     const router = useRouter();
 
@@ -10,15 +11,9 @@ export default {
       router.back();
     };
 
-    return { goBack, logoWS };
+    console.log("Caminho da logo:", logoWSq);
+
+    return { goBack, logoWSq };
   }
-};
+});
 </script>
-
-<template>
-  <footer class="fixed bottom-0 left-0 w-full p-4 bg-transparent flex justify-center items-center">
-    <img :src="logoWS" alt="Logo" class="w-12 h-12 opacity-80 transition-opacity" />
-  </footer>
-</template>
-
-
