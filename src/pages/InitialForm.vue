@@ -1,39 +1,32 @@
-<script lang="ts">
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 import iconSuporte from '@/assets/images/iconSuporte.png';
-import navbar from '@/shared/components/navbar.vue';
-import footer from '@/shared/components/footer.vue';
-export default {
-  components: { navbar, footer },
-  setup() {
-    const empresa = ref('Websupply');
-    const departamento = ref('TI');
-    const ipEquipamento = ref('123456789');
+import Navbar from '@/shared/components/Navbar.vue';
 
-    onMounted(() => {
-      const link = document.createElement('link');
-      link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
-      link.rel = 'stylesheet';
-      document.head.appendChild(link);
+const empresa = ref('Websupply');
+const departamento = ref('TI');
+const ipEquipamento = ref('123456789');
 
-      const materialIconsLink = document.createElement('link');
-      materialIconsLink.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
-      materialIconsLink.rel = 'stylesheet';
-      document.head.appendChild(materialIconsLink);
-    });
+onMounted(() => {
+  const link = document.createElement('link');
+  link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
+  link.rel = 'stylesheet';
+  document.head.appendChild(link);
 
-    return { empresa, departamento, ipEquipamento, LogoRemaza, iconSuporte };
-  },
-};
+  const materialIconsLink = document.createElement('link');
+  materialIconsLink.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+  materialIconsLink.rel = 'stylesheet';
+  document.head.appendChild(materialIconsLink);
+});
 </script>
 
 <template>
-  <navbar />
+  <Navbar />
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
     <img :src="LogoRemaza" alt="Remaza" class="w-[150px] md:w-[200px] lg:w-[250px] mx-auto mb-4" />
 
-    <div class="p-6 md:p-8 w-full max-w-md border border-gray-300 bg-[#F0F4F8] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] rounded-[20px]">
+    <div class="p-6 md:p-8 w-full max-w-md border border-[#DFDEDE] bg-[#F0F4F8] shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)] rounded-[20px]">
       <div class="flex items-center justify-center mb-4">
         <img :src="iconSuporte" alt="Ícone de suporte" class="w-10 h-10" />
       </div>
@@ -52,21 +45,21 @@ export default {
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">business</i> Empresa
         </label>
-        <input v-model="empresa" class="w-full px-3 py-2 border rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
+        <input v-model="empresa" class="w-full px-3 py-2 border border-[#CBC8C8] rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
       </div>
 
       <div class="mb-4">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">people</i> Departamento
         </label>
-        <input v-model="departamento" class="w-full px-3 py-2 border rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
+        <input v-model="departamento" class="w-full px-3 py-2 border border-[#CBC8C8] rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
       </div>
 
       <div class="mb-6">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">wifi</i> IP do equipamento
         </label>
-        <input v-model="ipEquipamento" class="w-full px-3 py-2 border rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
+        <input v-model="ipEquipamento" class="w-full px-3 py-2 border border-[#CBC8C8] rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
       </div>
 
       <router-link to="./Cadastro">
@@ -75,7 +68,7 @@ export default {
         </button>
       </router-link>
 
-      <button class="w-full py-2 rounded-lg border border-green-500 text-green-600 font-semibold flex items-center justify-center gap-2 hover:bg-green-100 transition hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
+      <button class="w-full py-2 rounded-[20px] border border-green-500 text-green-600 font-semibold flex items-center justify-center gap-2 hover:bg-green-100 transition hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
         <i class="material-icons">chat</i> Falar no Whatsapp
       </button>
     </div>
@@ -86,10 +79,10 @@ export default {
 .gradient-bg {
   background: linear-gradient(224deg, rgba(255, 255, 255, 0.60) -8.95%, rgba(240, 244, 248, 0.60) 22.3%, rgba(74, 144, 226, 0.60) 132.39%);
   width: 100%;
-  height: 100vh;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 </style>

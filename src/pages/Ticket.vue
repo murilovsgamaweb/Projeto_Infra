@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 import Check from '@/assets/images/check.svg';
-import navbar from '@/shared/components/navbar.vue';
+import navbar from '@/shared/components/Navbar.vue';
 
 export default {
   components: { navbar },
@@ -35,22 +35,22 @@ export default {
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
     <img :src="LogoRemaza" alt="Remaza" class="w-[150px] md:w-[200px] lg:w-[250px] mx-auto mb-6" />
 
-    <div class="p-6 md:p-8 w-full max-w-md rounded-[30px] border border-[#F0F4F8] bg-[#F0F4F8] shadow-md text-center">
+    <div class="p-6 md:p-8 w-full max-w-md rounded-[30px] border border-[#CBC8C8] bg-[#F0F4F8] shadow-md text-center">
       <img :src="Check" alt="Success" class="w-16 h-16 md:w-20 md:h-20 mx-auto mb-4" />
 
       <h2 class="text-lg md:text-2xl font-bold gradient-text">
         Chamado aberto com sucesso!
       </h2>
 
-      <div class="mt-4 p-4 rounded-[10px] border border-[#869AA8] bg-white shadow-md">
-        <div class="flex items-center justify-center gap-2 text-[#414040] font-normal">
+      <div class="mt-4 p-4 rounded-[10px] border border-[#CBC8C8] bg-white shadow-md">
+        <div class="flex items-center justify-center gap-2 text-[#869AA8] font-normal">
           <span class="material-icons text-lg">confirmation_number</span>
           <p class="text-sm">Número do Ticket</p>
         </div>
 
         <div class="flex items-center justify-center gap-2 mt-2">
           <p class="text-3xl font-bold gradient-number">{{ ticketNumber }}</p>
-          <span class="material-icons text-3xl gradient-number cursor-pointer" @click="copyToClipboard">
+          <span class="material-icons text-3xl gradient-copy cursor-pointer" @click="copyToClipboard">
             content_copy
           </span>
         </div>
@@ -62,7 +62,7 @@ export default {
          Nossa equipe entrará em contato em breve.
       </p>
 
-      <div class="mt-6 px-3 py-2 w-fit mx-auto flex items-center justify-center gap-2 rounded-[10px] border border-[#9C9FA1] bg-white">
+      <div class="mt-6 px-4 py-3 w-fit mx-auto flex items-center justify-center gap-2 rounded-[10px] border border-[#CBC8C8] bg-white">
         <span class="material-icons text-[#FF9E01]">schedule</span>
         <p class="text-[#FF9E01] font-roboto font-normal text-center">Chamado em andamento</p>
       </div>
@@ -79,6 +79,7 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  border: 1px solid #DFDEDE;
 }
 
 .gradient-text {
@@ -94,5 +95,9 @@ export default {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-weight: 700;
+}
+
+.gradient-copy {
+  color: #E99001;
 }
 </style>

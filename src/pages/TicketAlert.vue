@@ -2,7 +2,7 @@
 import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 import Alert from '@/assets/images/alert.svg';
-import navbar from '@/shared/components/navbar.vue';
+import navbar from '@/shared/components/Navbar.vue';
 
 export default {
   components: { navbar },

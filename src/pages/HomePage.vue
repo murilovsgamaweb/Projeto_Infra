@@ -1,33 +1,23 @@
-<script lang="ts">
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
-import Footer from '@/shared/components/footer.vue';
 
-export default {
-  components: { Footer },
-  setup() {
-    const code = ref('');
-    const submitCode = () => {
-      alert(`Código enviado: ${code.value}`);
-    };
 
-    onMounted(() => {
-      const link = document.createElement('link');
-      link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
-      link.rel = 'stylesheet';
-      document.head.appendChild(link);
-    });
+const code = ref<string>('');
 
-    return { code, submitCode, LogoRemaza };
-  },
-};
+onMounted(() => {
+  const link = document.createElement('link');
+  link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
+  link.rel = 'stylesheet';
+  document.head.appendChild(link);
+});
 </script>
 
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
     <img :src="LogoRemaza" alt="Remaza" class="w-[150px] md:w-[200px] lg:w-[250px] mx-auto mb-4" />
 
-    <div class="p-6 md:p-8 w-full max-w-md border border-[#A6A6A6] bg-[#F0F4F8] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[20px]">
+    <div class="p-6 md:p-8 w-full max-w-md border border-[#DFDEDE] bg-[#F0F4F8] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] rounded-[20px]">
       <div class="mb-6 relative">
         <h1 class="text-xl md:text-2xl font-bold mb-4 text-center" style="color: #102155;">Bem vindo!</h1>
 
@@ -37,7 +27,7 @@ export default {
             v-model="code"
             type="text"
             id="qrCode"
-            class="mt-1 block w-full px-3 py-2 border border-[#A6A6A6] rounded-[15px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] focus:outline-none focus:ring-gray-500 focus:border-gray-400 text-sm md:text-base pr-12"
+            class="mt-1 block w-full px-3 py-2 border border-[#CBC8C8] rounded-[15px] shadow-[0px_4px_4px_rgba(0,0,0,0.25)] focus:outline-none focus:ring-gray-500 focus:border-gray-300 text-sm md:text-base pr-12"
             placeholder="Digite o código ou QR CODE"
             maxlength="8"
             required
@@ -63,7 +53,6 @@ export default {
         </router-link>
       </div>
     </div>
-   <footer />
   </div>
 </template>
 
@@ -76,16 +65,5 @@ export default {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-body {
-  font-family: 'Roboto', sans-serif;
-}
-</style>
-
-<style>
-body {
-  font-family: 'Roboto', sans-serif;
-  background: linear-gradient(224deg, rgba(255, 255, 255, 0.60) -8.95%, rgba(240, 244, 248, 0.60) 22.3%, rgba(74, 144, 226, 0.60) 132.39%);
 }
 </style>
