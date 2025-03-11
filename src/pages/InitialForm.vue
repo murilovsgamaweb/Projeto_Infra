@@ -52,30 +52,30 @@ export default {
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">business</i> Empresa
         </label>
-        <input v-model="empresa" class="w-full px-3 py-2 border rounded-lg bg-white" disabled />
+        <input v-model="empresa" class="w-full px-3 py-2 border rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
       </div>
 
       <div class="mb-4">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">people</i> Departamento
         </label>
-        <input v-model="departamento" class="w-full px-3 py-2 border rounded-lg bg-white" disabled />
+        <input v-model="departamento" class="w-full px-3 py-2 border rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
       </div>
 
       <div class="mb-6">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">wifi</i> IP do equipamento
         </label>
-        <input v-model="ipEquipamento" class="w-full px-3 py-2 border rounded-lg bg-white" disabled />
+        <input v-model="ipEquipamento" class="w-full px-3 py-2 border rounded-lg bg-white shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]" disabled />
       </div>
 
       <router-link to="./Cadastro">
-        <button class="w-full py-2 rounded-[15px] border border-[#FF9E01] bg-[#F90] text-white font-semibold flex items-center justify-center gap-2 mb-3 shadow-[inset_0px_4px_4px_0px_#FFF4E1] hover:bg-[#FF9E01] transition">
+        <button class="w-full py-2 rounded-[15px] border border-[#FF9E01] bg-[#F90] text-white font-semibold flex items-center justify-center gap-2 mb-3 shadow-[inset_0px_4px_4px_0px_#FFF4E1] hover:bg-[#ff9900d7] transition hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
           <i class="material-icons">headset</i> Abrir Chamado
         </button>
       </router-link>
 
-      <button class="w-full py-2 rounded-lg border border-green-500 text-green-600 font-semibold flex items-center justify-center gap-2 hover:bg-100green- transition">
+      <button class="w-full py-2 rounded-lg border border-green-500 text-green-600 font-semibold flex items-center justify-center gap-2 hover:bg-green-100 transition hover:shadow-[0px_4px_4px_0px_rgba(0,0,0,0.25)]">
         <i class="material-icons">chat</i> Falar no Whatsapp
       </button>
     </div>

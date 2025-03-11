@@ -3,6 +3,7 @@ import Home from '@/pages/HomePage.vue'
 import InitialForm  from '@/pages/InitialForm.vue'
 import Cadastro from '@/pages/Cadastro.vue'
 import Ticket from '@/pages/Ticket.vue'
+import TicketAlert from '@/pages/TicketAlert.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/ticket',
       name: 'ticket',
       component: Ticket,
+    },
+    {
+      path: '/ticketAlert',
+      name: 'ticketAlert',
+      component: TicketAlert,
     }
   ],
 })

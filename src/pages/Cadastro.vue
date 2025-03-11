@@ -10,7 +10,7 @@ export default {
   setup() {
     const nome = ref('Julia Santos');
     const email = ref('julia.santos@email.com');
-    const celular = ref('');
+    const celular = ref('11940028922');
     const tituloChamado = ref('');
     const descricaoProblema = ref('');
 
@@ -33,7 +33,7 @@ export default {
 </script>
 
 <template>
- <navBar />
+<navbar />
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
     <img :src="LogoRemaza" alt="Remaza" class="w-[150px] md:w-[200px] lg:w-[250px] mx-auto mb-4" />
 
@@ -46,28 +46,28 @@ export default {
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">person</i> Nome
         </label>
-        <input v-model="nome" class="w-full px-3 py-2 border rounded-lg" placeholder="Digite seu nome" />
+        <input v-model="nome" class="w-full px-3 py-2 border rounded-lg input-style" placeholder="Digite seu nome" />
       </div>
 
       <div class="mb-4">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">email</i> E-mail
         </label>
-        <input v-model="email" class="w-full px-3 py-2 border rounded-lg" placeholder="Digite seu e-mail" />
+        <input v-model="email" class="w-full px-3 py-2 border rounded-lg input-style" placeholder="Digite seu e-mail" />
       </div>
 
       <div class="mb-4">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">phone</i> Celular
         </label>
-        <input v-model="celular" @input="validatePhone" class="w-full px-3 py-2 border rounded-lg" placeholder="Digite seu número" maxlength="11" />
+        <input v-model="celular" @input="validatePhone" class="w-full px-3 py-2 border rounded-lg input-style" placeholder="Digite seu número" maxlength="11" />
       </div>
 
       <div class="mb-4">
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">assignment</i> Título do chamado
         </label>
-        <select v-model="tituloChamado" class="w-full px-3 py-2 border rounded-lg">
+        <select v-model="tituloChamado" class="w-full px-3 py-2 border rounded-lg input-style">
           <option disabled value="">Selecione o título do chamado</option>
           <option value="problema1">1- Problema com impressora</option>
           <option value="problema2">2- Problema com a máquina </option>
@@ -82,11 +82,10 @@ export default {
         <label class="flex items-center text-gray-600 text-sm mb-1">
           <i class="material-icons text-gray-500 mr-2">description</i> Descrição do problema
         </label>
-        <textarea v-model="descricaoProblema" class="w-full px-3 py-2 border rounded-lg" placeholder="Descreva o problema detalhadamente"></textarea>
+        <textarea v-model="descricaoProblema" class="w-full px-3 py-2 border rounded-lg input-style" placeholder="Descreva o problema detalhadamente"></textarea>
       </div>
 
-
-      <router-link to="/ticket">
+      <router-link to="/Ticket">
       <button class="w-1/2 py-2 rounded-lg bg-orange-500 text-white font-semibold flex items-center justify-center gap-2 hover:bg-orange-600 transition mx-auto" style="border-radius: 15px; border: 1px solid #FF9E01; background: #F90; box-shadow: 0px 4px 4px 0px #FFF4E1 inset;">
         Abrir ticket
       </button>
@@ -100,6 +99,16 @@ export default {
   background: linear-gradient(224deg, rgba(255, 255, 255, 0.60) -8.95%, rgba(240, 244, 248, 0.60) 22.3%, rgba(74, 144, 226, 0.60) 132.39%);
   width: 100%;
   height: 100vh;
+}
+
+.input-style {
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  border: 1px solid #B0B0B0;
+}
+
+.input-style:focus {
+  border-color: #D3D3D3;
+  outline: none;
 }
 
 @media (max-width: 768px) {
