@@ -5,6 +5,7 @@ import iconSuporte from '@/assets/images/iconSuporte.png';
 import Navbar from '@/shared/components/Navbar.vue';
 
 
+
 const nome = ref('Julia Santos');
 const email = ref('julia.santos@email.com');
 const celular = ref('11940028922');
@@ -93,7 +94,7 @@ onMounted(() => {
       </div>
 
 
-      <router-link to="/Ticket">
+      <router-link to="/TicketAlert">
         <button
           class="w-3/4 py-1.5 rounded-xl bg-[#FF9E01] text-white font-semibold flex items-center justify-center gap-2 transition mx-auto border border-[#FF9E01] bg-[#FF8C00] shadow-[inset_0px_4px_4px_0px_#FFF4E1] hover:bg-[#FF7F00] focus:outline-none focus:ring-2 focus:ring-[#FF9E01] focus:ring-opacity-50 duration-200"
         >
