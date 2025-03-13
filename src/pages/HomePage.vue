@@ -1,18 +1,3 @@
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import LogoRemaza from '@/assets/images/Logoremaza.png';
-import FooterWS from '@/shared/components/FooterWS.vue';
-
-
-const code = ref<string>('');
-
-onMounted(() => {
-  const link = document.createElement('link');
-  link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
-  link.rel = 'stylesheet';
-  document.head.appendChild(link);
-});
-</script>
 
 <template>
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg">
@@ -59,6 +44,8 @@ onMounted(() => {
 
 </template>
 
+
+
 <style scoped>
 .gradient-bg {
   background: linear-gradient(224deg, rgba(255, 255, 255, 0.60) -8.95%, rgba(240, 244, 248, 0.60) 22.3%, rgba(74, 144, 226, 0.60) 132.39%);
@@ -70,3 +57,21 @@ onMounted(() => {
   align-items: center;
 }
 </style>
+
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import LogoRemaza from '@/assets/images/Logoremaza.png';
+import FooterWS from '@/shared/components/FooterWS.vue';
+
+
+const code = ref<string>('');
+
+onMounted(() => {
+  const link = document.createElement('link');
+  link.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
+  link.rel = 'stylesheet';
+  document.head.appendChild(link);
+});
+</script>
+

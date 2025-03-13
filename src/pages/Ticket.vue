@@ -1,32 +1,3 @@
-<script setup lang="ts">
-import { ref, onMounted } from 'vue';
-import LogoRemaza from '@/assets/images/Logoremaza.png';
-import Check from '@/assets/images/check.svg';
-import Navbar from '@/shared/components/Navbar.vue';
-import FooterWS from '@/shared/components/FooterWS.vue';
-
-
-const ticketNumber = ref('123456');
-
-
-const copyToClipboard = () => {
-  navigator.clipboard.writeText(ticketNumber.value);
-};
-
-
-onMounted(() => {
-  const robotoFont = document.createElement('link');
-  robotoFont.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
-  robotoFont.rel = 'stylesheet';
-  document.head.appendChild(robotoFont);
-
-  const materialIcons = document.createElement('link');
-  materialIcons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
-  materialIcons.rel = 'stylesheet';
-  document.head.appendChild(materialIcons);
-});
-</script>
-
 <template>
   <Navbar />
   <div class="min-h-screen flex flex-col items-center justify-center p-4 gradient-bg border-[#DFDEDE]">
@@ -68,6 +39,9 @@ onMounted(() => {
   </div>
 </template>
 
+
+
+
 <style scoped>
 .gradient-bg {
   background: linear-gradient(224deg, rgba(255, 255, 255, 0.6) -8.95%, rgba(240, 244, 248, 0.6) 22.3%, rgba(74, 144, 226, 0.6) 132.39%);
@@ -99,3 +73,33 @@ onMounted(() => {
   color: #e99001;
 }
 </style>
+
+
+<script setup lang="ts">
+import { ref, onMounted } from 'vue';
+import LogoRemaza from '@/assets/images/Logoremaza.png';
+import Check from '@/assets/images/check.svg';
+import Navbar from '@/shared/components/Navbar.vue';
+import FooterWS from '@/shared/components/FooterWS.vue';
+
+
+const ticketNumber = ref('123456');
+
+
+const copyToClipboard = () => {
+  navigator.clipboard.writeText(ticketNumber.value);
+};
+
+
+onMounted(() => {
+  const robotoFont = document.createElement('link');
+  robotoFont.href = 'https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap';
+  robotoFont.rel = 'stylesheet';
+  document.head.appendChild(robotoFont);
+
+  const materialIcons = document.createElement('link');
+  materialIcons.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+  materialIcons.rel = 'stylesheet';
+  document.head.appendChild(materialIcons);
+});
+</script>
