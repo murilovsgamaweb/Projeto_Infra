@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
+import FooterWS from '@/shared/components/FooterWS.vue';
 
 
 const code = ref<string>('');
@@ -53,7 +54,9 @@ onMounted(() => {
         </router-link>
       </div>
     </div>
+    <FooterWS />
   </div>
+
 </template>
 
 <style scoped>

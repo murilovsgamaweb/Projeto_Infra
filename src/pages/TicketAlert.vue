@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 import Alert from '@/assets/images/alert.svg';
 import Navbar from '@/shared/components/Navbar.vue';
+import FooterWS from '@/shared/components/FooterWS.vue';
 
 const ticketNumber = ref('123456');
 
@@ -60,6 +61,7 @@ onMounted(() => {
         </router-link>
       </div>
     </div>
+    <FooterWS />
   </div>
 </template>
 

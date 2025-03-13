@@ -3,6 +3,7 @@ import { ref, onMounted } from 'vue';
 import LogoRemaza from '@/assets/images/Logoremaza.png';
 import Check from '@/assets/images/check.svg';
 import Navbar from '@/shared/components/Navbar.vue';
+import FooterWS from '@/shared/components/FooterWS.vue';
 
 
 const ticketNumber = ref('123456');
@@ -63,6 +64,7 @@ onMounted(() => {
         <p class="text-[#FFffff] font-roboto font-normal text-sm">Chamado em andamento</p>
       </div>
     </div>
+    <FooterWS />
   </div>
 </template>
 
