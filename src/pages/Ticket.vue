@@ -25,7 +25,7 @@
       </div>
 
       <p class="mt-4 text-base md:text-lg font-semibold text-[#565555]">
-        Aguarde atendimento nov
+        Aguarde atendimento 
         <br>
         Nossa equipe entrará em contato em breve.
       </p>
