@@ -14,7 +14,7 @@
         </div>
         <div>
           <p class="text-[#102155] font-bold">Marca: <span class="font-normal">DELL</span></p>
-          <p class="text-[#102155] font-bold">Modelo: <span class="font-normal">Exemploi</span></p>
+          <p class="text-[#102155] font-bold">Modelo: <span class="font-normal">Exemplo</span></p>
         </div>
       </div>
 
