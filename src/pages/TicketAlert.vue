@@ -30,7 +30,7 @@
         <router-link to="/">
 
           <button class="btn-custom bg-[#FF8C00] border-[#FF9E01] hover:bg-[#FF7F00] focus:ring-[#FF9E01]">
-            Cancelar
+            Cancelar ii
           </button>
         </router-link>
 
