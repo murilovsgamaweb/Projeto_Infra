@@ -1,6 +1,6 @@
 <template>
   <footer class="fixed bottom-0 left-0 w-full flex justify-center items-center py-4 bg-transparent">
-    <img :src="LogoWS" alt="Logo" class="w-16 sm:w-20 md:w-24 lg:w-28 xl:w-32" />
+    <img :src="LogoWS" alt="Logo" class="w-12 sm:w-16 md:w-20 lg:w-24 xl:w-28" />
   </footer>
 </template>
 
